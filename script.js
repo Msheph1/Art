@@ -1,17 +1,32 @@
-let gridSize = 16;
+let size = 16;
 let curColor = "black";
-createGrid(16, 16);
-function createGrid(x, y) {
-  gridSize = x;
+createGrid(16);
+function createGrid(x) {
+  size = x;
   for (let i = 0; i < x * x; i++) {
     let temp = document.createElement("div");
     temp.classList.add("square");
+    temp.style.cssText =
+      "height: " + 420 / size + "px; width: " + 420 / size + "px;";
     temp.addEventListener("click", function () {
+      console.log(size);
       if (curColor !== "rainbow") {
-        temp.style.cssText = "background-color:" + curColor + ";";
+        console.log("working");
+        temp.style.cssText =
+          "background-color:" +
+          curColor +
+          "; height: " +
+          420 / size +
+          "px; width: " +
+          420 / size +
+          "px;";
       } else {
         temp.style.cssText =
-          "background-image: linear-gradient(to right,red,orange,yellow,green,blue,purple);";
+          "background-image: linear-gradient(to right,red,orange,yellow,green,blue,purple); height: " +
+          420 / size +
+          "px; width: " +
+          420 / size +
+          "px;";
       }
     });
     document.querySelector(".container").appendChild(temp);
@@ -27,16 +42,14 @@ function removeGrid() {
 
 document.querySelector(".clear-btn").addEventListener("click", function () {
   removeGrid();
-  createGrid(gridSize, gridSize);
+  createGrid(size);
 });
 
 document.querySelector(".size-btn").addEventListener("click", function () {
   let size = prompt("Enter new grid size: ");
+
   removeGrid();
-  createGrid(size, size);
-  let container = document.querySelector(".container");
-  container.style.cssText =
-    "height: " + size * 20 + "px; width: " + size * 20 + "px;";
+  createGrid(size);
 });
 
 let colors = document.querySelectorAll(".color");
