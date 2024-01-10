@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  height: 320px;
+  border-color: black;
+  border-style: solid;
+}
+.square {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+}
+
+.square:hover {
+  background-color: lightgray;
+}
+
+button {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+}
+
+.color {
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  border: solid;
+}
+
+.color:hover {
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.rainbow {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    purple
+  );
+}
