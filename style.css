@@ -27,6 +27,8 @@ body {
 button {
   margin-top: 10px;
   margin-right: 10px;
+  border: solid;
+  font-weight: 700;
 }
 
 .colors {
