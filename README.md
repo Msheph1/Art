@@ -1,1 +1,1 @@
-# OdinProj-2-Art
+# Art Project
